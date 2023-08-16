@@ -6,13 +6,16 @@ import {findAllByDisplayValue} from "@testing-library/react";
 function App() {
   return (
     <div className="App">
-        <h1>My app components_props_propstype</h1>
+        <AppTitle />
         <Rating />
         <Accordion />
     </div>
   );
 }
 
+function AppTitle() {
+    return <h1>My app components_props_propstype</h1>
+}
 function Rating() {
   return (
       <div>
