@@ -18,11 +18,11 @@ function AppTitle() {
 }
 function Rating() {
   return (
-      <div>
+      <>
           <Star />
           <Star />
           <Star />
-      </div>
+      </>
   )
 }
 
@@ -32,12 +32,26 @@ function Star () {
 
 function Accordion () {
     return <div>
-        <h3>Menu</h3>
+        <AccordionTitle />
+        <AccordionBody />
+    </div>
+}
+
+function AccordionTitle () {
+    return (
+        <>
+            <h3>Menu</h3>
+        </>
+    )
+}
+
+function AccordionBody () {
+    return (
         <ul>
             <li>1</li>
             <li>2</li>
             <li>3</li>
         </ul>
-    </div>
+    )
 }
 export default App;
