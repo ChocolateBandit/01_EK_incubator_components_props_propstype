@@ -1,13 +1,48 @@
 import React from "react";
 
-export function Rating() {
+export function Rating(props: any) {
+    debugger
+    if (props.value === 1) {
+        return (
+            <div>
+                <Star selected={true}/>
+                <Star selected={false}/>
+                <Star selected={false}/>
+                <Star selected={false}/>
+                <Star selected={false}/>
+            </div>
+        );
+    } if (props.value === 2) {
+        return (
+            <div>
+                <Star selected={true}/>
+                <Star selected={true}/>
+                <Star selected={false}/>
+                <Star selected={false}/>
+                <Star selected={false}/>
+            </div>
+        )
+    } if (props.value === 3) {
+        return (
+            <div>
+                <Star selected={true}/>
+                <Star selected={true}/>
+                <Star selected={true}/>
+                <Star selected={false}/>
+                <Star selected={false}/>
+            </div>
+        )
+    }
     return (
-        <>
-            <Star selected={true}/>
-            <Star selected={false}/>
-            <Star selected={true}/>
-        </>
-    )
+        <div>
+            <Star value={false}/>
+            <Star value={false}/>
+            <Star value={false}/>
+            <Star value={false}/>
+            <Star value={false}/>
+        </div>
+    );
+
 }
 
 
@@ -16,7 +51,7 @@ function Star (props: any) {
     if (props.selected === true) {
         return <span><b>Star </b></span>
     } else {
-        return <span>Star</span>
+        return <span>Star </span>
     }
 
 }
