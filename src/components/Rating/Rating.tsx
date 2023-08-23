@@ -12,7 +12,8 @@ export function Rating(props: any) {
                 <Star selected={false}/>
             </div>
         );
-    } if (props.value === 2) {
+    }
+    if (props.value === 2) {
         return (
             <div>
                 <Star selected={true}/>
@@ -22,7 +23,8 @@ export function Rating(props: any) {
                 <Star selected={false}/>
             </div>
         )
-    } if (props.value === 3) {
+    }
+    if (props.value === 3) {
         return (
             <div>
                 <Star selected={true}/>
@@ -46,8 +48,7 @@ export function Rating(props: any) {
 }
 
 
-
-function Star (props: any) {
+function Star(props: any) {
     if (props.selected === true) {
         return <span><b>Star </b></span>
     } else {
