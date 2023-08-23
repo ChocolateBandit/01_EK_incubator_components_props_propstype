@@ -1,12 +1,19 @@
 import React from "react";
 
-function Accordion(props: any) {
+type AccordionPropsType = {
+    titleValue: string
+    collapsed: boolean
+}
+function Accordion(props: AccordionPropsType) {
     return <div>
         <AccordionTitle title={props.titleValue}/>
-        <AccordionBody/>
+        <AccordionBody collapsed={props.collapsed}/>
     </div>
 }
 
+type AccordionTitlePropsType = {
+    title: string
+}
 function AccordionTitle(props: any) {
     return (
         <>
@@ -15,14 +22,22 @@ function AccordionTitle(props: any) {
     )
 }
 
-function AccordionBody() {
-    return (
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-    )
+type AccordionBodyProps = {
+    collapsed: boolean;
+};
+
+function AccordionBody({collapsed}: AccordionBodyProps) {
+    if (collapsed) {
+        return (
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        )
+    }
+    return null;
+
 }
 
 export default Accordion;
