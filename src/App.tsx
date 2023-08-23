@@ -12,6 +12,8 @@ function App() {
         <Rating value={3}/>
         <Accordion titleValue={'Menu'}/>
         <Accordion titleValue={'Users'}/>
+        <Rating value={0}/>
+        <Rating value={2}/>
     </div>
   );
 }

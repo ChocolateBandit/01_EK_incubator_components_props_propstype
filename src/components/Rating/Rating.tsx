@@ -1,6 +1,9 @@
 import React from "react";
 
-export function Rating(props: any) {
+type RatingPropsType = {
+    value: 0 | 1 | 2 | 3
+}
+export function Rating(props: RatingPropsType) {
     debugger
     if (props.value === 1) {
         return (
