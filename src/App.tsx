@@ -6,7 +6,7 @@ import {Rating} from "./components/Rating/Rating";
 function App() {
   return (
     <div className="App">
-        <AppTitle />
+        <AppTitle title={"Title with props PageTitlePropsType"}/>
         <Rating value={1}/>
         <Rating value={2}/>
         <Rating value={3}/>
@@ -18,8 +18,11 @@ function App() {
   );
 }
 
-function AppTitle() {
-    return <h1>My app components_props_propstype</h1>
+type PageTitlePropsType = {
+    title: string
+}
+function AppTitle(props: PageTitlePropsType) {
+    return <h1>{props.title}</h1>
 }
 
 
